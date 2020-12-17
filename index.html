@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ios14.3 WebP Error</title>
+</head>
+<body>
+  <img src="error.webp">
+  <script>
+    var img = new Image();
+    img.src = "error.webp";
+    img.addEventListener('error', (e) => {
+      console.error("receive error");
+      console.log(e);
+    });
+    document.body.appendChild(img);
+  </script>
+</body>
+</html>
